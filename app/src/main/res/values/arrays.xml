@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="feedback_types">
+        <item>General comment</item>
+        <item>Suggestion</item>
+        <item>Report bug</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="email_subjects">
+        <item>Task Essence Comment</item>
+        <item>Task Essence Suggestion</item>
+        <item>Task Essence Bug</item>
+        <item>Task Essence</item>
+    </string-array>
+
+    <string-array name="email_body_texts">
+        <item>I love getting comments on Task Essence! What would you like me to know?</item>
+        <item>I am always looking for new ways to improve Task Essence. What\'s your idea?</item>
+        <item>Oh no! something didn\'t work right! Describe your bug and please include as much detail as possible.</item>
+        <item>What\'s on your mind?</item>
+    </string-array>
+
+    <string-array name="tasks_completed_icon_data">
+        <item>m 102.24833,99.524722 c 2.83139,18.496928 -10.762449,16.575748 -8.443167,0.0729 A 34.943793,12.085591 0 0 0 63.765564,111.55512 34.943793,12.085591 0 0 0 98.704828,123.64386 34.943793,12.085591 0 0 0 133.64402,111.55512 34.943793,12.085591 0 0 0 102.24833,99.524682 Z</item>
+        <item>M 153.26791,141.868 A 54.757167,14.933774 0 0 1 98.510748,156.80178 54.757167,14.933774 0 0 1 43.753575,141.868 54.757167,14.933774 0 0 1 98.510748,126.93425 54.757167,14.933774 0 0 1 153.26791,141.868 Z</item>
+        <item>M 174.79948,179.81612 A 75.958708,20.255652 0 0 1 98.840779,200.07178 75.958708,20.255652 0 0 1 22.882063,179.81612 75.958708,20.255652 0 0 1 98.840779,159.56047 75.958708,20.255652 0 0 1 174.79948,179.81612 Z</item>
+        <item>m 95.599659,69.615441 c 1.06108,10.516532 1.586601,18.93316 -0.17695,30.124673 -2.241164,14.222136 7.579171,15.702066 5.545731,0.686756 -1.634541,-12.579957 -1.654142,-21.916037 -1.207091,-30.362828 -1.041461,1.09668 -1.77238,1.784811 -1.77238,1.784811 0,0 -1.007859,-0.87815 -2.38931,-2.233412 z</item>
+        <item>m 96.685824,24.41054 c -1.86391,2.780335 -3.549017,5.681381 -5.058605,8.668722 -0.878967,1.843703 -1.775,3.745702 -2.52026,5.697843 -3.498929,-1.986587 -7.436728,-3.234903 -11.265463,-4.39663 0.249607,0.735706 0.52456,1.463032 0.810286,2.185395 1.003009,2.347704 2.046489,4.792199 3.388942,7.01921 -3.476551,0.08038 -6.967754,0.715694 -10.35699,1.367359 0.563573,0.534745 1.145455,1.049865 1.734778,1.555977 2.761546,2.244538 5.67986,4.619431 8.980847,6.039424 -3.44782,1.906585 -6.060628,5.12581 -8.435144,8.213968 3.530578,0.136623 7.099054,0.05372 10.582298,-0.582909 0.998641,-0.224919 2.167605,-0.474813 3.208073,-0.913122 2.213129,5.001641 6.281685,8.915927 10.234002,12.582695 1.086299,-1.03618 2.120262,-2.126134 3.117642,-3.247864 2.18444,-2.630263 4.6267,-5.436005 5.81153,-8.696111 3.92606,2.03861 8.57162,2.057168 12.90412,1.951302 -2.03261,-2.722909 -4.24897,-5.341731 -6.80372,-7.591784 4.06738,-1.702046 7.68823,-4.444013 11.14919,-7.137549 -0.74495,-0.220493 -1.49769,-0.415123 -2.25257,-0.598413 -3.41457,-0.731716 -7.02044,-1.507257 -10.54251,-1.315165 2.32083,-2.993085 4.09037,-6.444981 5.76967,-9.813355 -0.76707,0.123159 -1.52983,0.272564 -2.28978,0.433566 -3.12487,0.75103 -6.41168,1.539868 -9.32708,2.98173 -2.23672,-5.170467 -5.4831,-9.906649 -8.839256,-14.404289 z</item>
+        <item>m 94.363068,48.647372 c 1.818011,-4.58829 5.228371,-3.08506 6.180652,-0.1416 -2.139091,3.31073 -2.847251,6.665099 -2.847251,6.665099 -1.009099,-3.26617 -1.467281,-4.175548 -3.333401,-6.523479 z</item>
+    </string-array>
+
+    <!-- Cannot seem to use ?color... within an array. -->
+    <integer-array name="tasks_completed_fill_colors">
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/taskColor1</item>
+        <item>@color/taskColor2</item>
+        <item>@color/taskColor3</item>
+    </integer-array>
+
+    <!-- Cannot seem to use ?color... within an array. -->
+    <integer-array name="tasks_completed_trace_residue_colors">
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/taskColor1</item>
+        <item>@color/taskColor2</item>
+        <item>@color/taskColor3</item>
+    </integer-array>
+
+    <string-array name="tasks_not_completed_icon_data">
+        <item>m 153.32411,200.31294 c 33.00637,-4.14339 45.91789,-11.84983 45.95987,-21.57801 -0.0417,-9.84224 -21.74693,-18.64026 -55.33455,-22.7204 -2.421,-0.10534 1.31104,4.08543 1.28826,6.19424 -0.0217,2.00561 -1.66357,3.88187 -1.35218,5.86328 0.42871,2.72792 4.50675,4.36291 4.24796,7.11216 -0.23476,2.49395 -4.58816,3.14671 -4.98975,5.61929 -0.31776,1.95636 1.96152,3.52115 2.33791,5.46709 0.28591,1.47818 -0.76498,3.16525 -0.0992,4.51565 1.15434,2.34154 4.77876,2.5213 6.31549,4.6317 1.01209,1.38991 -1.02549,5.3935 1.62624,4.895 z</item>
+        <item>m 87.553872,114.75764 c -9.185691,1.92359 -9.28665,2.36863 -17.053762,4.95356 -7.767108,2.58493 -14.656929,5.41453 -20.332789,8.31686 -5.675864,2.90231 -10.137566,5.87715 -13.049521,8.75288 -2.911957,2.87573 -4.274299,5.65191 -3.749688,8.15711 0.524614,2.5052 2.88654,4.50224 6.707647,5.96798 3.821108,1.46576 9.101515,2.40046 15.464977,2.78163 6.363458,0.38113 13.809687,0.20861 21.961344,-0.54003 5.506012,-0.50567 11.338784,-1.28087 17.372393,-2.31926 4.097341,-0.92889 0.66883,-4.16532 1.11338,-6.22626 0.40806,-1.89177 1.674459,-3.70918 1.424827,-5.6283 -0.26358,-2.02634 -2.531186,-3.36543 -2.974681,-5.36014 -0.628554,-2.82704 1.341649,-5.86805 0.599797,-8.6675 -0.601843,-2.27111 -2.502856,-3.98266 -3.904986,-5.86792 -1.116061,-1.50062 0.847289,-5.08741 -3.578938,-4.32067 z</item>
+        <item>m 109.37957,84.705414 c 4.51964,15.324666 -2.34257,16.485206 -2.34257,16.485206 -3.74231,0.79892 -4.95722,-2.339576 -4.95722,-2.339576 -2.646854,-3.197169 -5.327521,-0.525388 -2.981431,5.825266 1.202841,2.97776 -4.325293,8.68735 1.400811,7.91691 23.74774,-3.17142 50.58893,-10.02981 49.48625,-18.242374 -1.00612,-7.633129 -18.5512,-11.80097 -40.60582,-9.645375 z</item>
+        <item>m 185.02125,142.71214 c -1.59942,10.11243 -32.88078,13.07025 -70.03323,7.69142 -4.31187,-0.62426 -5.91272,-0.82536 -8.48583,-1.11049 -3.32736,-0.36871 -2.64965,-2.63247 -2.70366,-4.33446 -0.0811,-2.55517 3.11247,-4.2497 3.63818,-6.75152 0.48685,-2.31691 -0.82299,-4.72609 -0.56778,-7.0798 0.27995,-2.58201 2.27976,-4.85538 2.27297,-7.45252 -0.008,-2.89899 -3.45731,-5.54203 -2.58064,-8.3053 0.4424,-1.39445 0.56945,-2.81921 3.48027,-2.67387 3.31736,0.16564 5.95895,0.36986 10.73852,1.08764 37.12349,5.57504 65.84062,18.81646 64.2412,28.92889 z</item>
+        <item>m 135.00795,166.8279 c 0.76481,3.20919 6.51835,4.16634 6.49793,7.46535 -0.0137,2.2191 -4.08201,2.77588 -4.43273,4.96714 -0.39828,2.48842 2.44336,4.47729 3.02186,6.93008 0.4952,2.0996 -0.66841,4.5541 0.33669,6.46284 1.34472,2.55371 6.73199,2.47166 6.87451,5.2639 0.11652,2.28285 -0.46668,3.58994 -5.57077,3.9989 -11.31594,0.90665 -23.68315,1.97593 -36.70187,1.97593 -52.074881,0 -94.289913,-11.25734 -94.289919,-25.14398 6e-6,-13.88662 42.215038,-25.14397 94.289919,-25.14397 5.81581,0 11.27034,0.0801 23.02213,0.56344 7.12376,0.29297 7.32458,3.21065 8.4887,6.60067 0.67678,1.97085 -2.01953,4.03265 -1.53645,6.0597 z</item>
+        <item>m 65.62426,101.52596 c 23.410427,-7.045853 38.61228,-38.680075 43.31708,-14.373418 4.7048,15.665528 -8.63387,18.091158 -6.08728,1.537662 1.87972,-11.232513 -9.527478,7.167648 -34.569857,20.209946 z</item>
+        <item>m 58.587631,105.80739 c -1.012168,-0.015 -2.611102,0.21268 -5.047753,0.80276 -1.97507,0.47833 -5.333071,-0.0365 -7.924956,-0.69929 -0.295981,0.10494 -0.591299,0.21036 -0.871746,0.32506 -5.832094,2.38552 -3.356328,2.65798 -2.933701,4.47394 0.105661,0.45402 -0.987826,1.70066 -0.694901,2.75173 0.292928,1.05109 -0.196681,3.39616 0.17978,4.64416 0.376451,1.24804 2.937719,1.00475 3.293993,2.04949 0.35628,1.04468 0.676808,1.88778 0.909168,2.32904 0.806926,1.5324 4.247695,0.60604 5.184976,0.32361 1.760535,-4.30192 7.049972,-12.21161 7.924956,-13.54946 0.770011,-1.17736 3.016698,-3.40609 -0.0198,-3.45104 z</item>
+        <item>m 42.342925,104.31552 c 3.292081,-0.10834 6.411483,-1.54789 9.373092,-2.83326 2.961605,-1.28539 4.879029,-0.59771 6.485215,-1.847461 1.606181,-1.249762 4.414644,-3.904532 6.038048,-4.098415 3.246815,-0.387739 6.277532,1.31129 8.587369,6.531566 2.504508,5.22797 1.068398,10.14763 -1.275715,12.49449 -0.586028,0.5867 -1.544519,1.03338 -2.721015,1.3814 -1.176492,0.34802 -6.510731,-0.30317 -8.725236,0.0781 -2.214508,0.38124 -1.910731,1.3807 -4.708674,4.00763 -2.797939,2.62693 -4.530247,5.54651 -4.530247,5.54651 -3.556582,0.59666 6.505011,-14.42725 7.741485,-16.31783 1.026683,-1.56979 4.678997,-5.00854 -5.067613,-2.64815 -3.978752,0.96355 -13.576768,-2.0998 -11.196709,-2.29455 z</item>
+</string-array>
+
+    <!-- Cannot seem to use ?color... within an array. -->
+    <integer-array name="tasks_not_completed_fill_colors">
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/flower_stem_wilted</item>
+        <item>@color/flower_petals_wilted</item>
+        <item>@color/flower_bud_wilted</item>
+    </integer-array>
+
+    <!-- Cannot seem to use ?color... within an array. -->
+    <integer-array name="tasks_not_completed_trace_residue_colors">
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/stones</item>
+        <item>@color/flower_stem_wilted</item>
+        <item>@color/flower_petals_wilted</item>
+        <item>@color/flower_bud_wilted</item>
+    </integer-array>
+
+    <array name="help_item_layouts">
+        <item>@layout/can_i_edit_or_undo_tasks</item>
+        <item>@layout/how_many_tasks_can_i_enter</item>
+        <item>@layout/i_have_found_a_bug</item>
+        <item>@layout/when_can_i_enter_more_tasks</item>
+        <item>@layout/why_is_feature_x_not_available</item>
+        <item>@layout/understanding_task_essence</item>
+    </array>
+
+    <string-array name="help_item_sections">
+        <item>FAQ</item>
+        <item>FAQ</item>
+        <item>FAQ</item>
+        <item>FAQ</item>
+        <item>FAQ</item>
+        <item>Articles</item>
+    </string-array>
+
+    <string-array name="help_item_titles">
+        <item>Can I undo or edit tasks?</item>
+        <item>How many tasks can I enter?</item>
+        <item>I have found a bug, what should I do?</item>
+        <item>When can I enter more tasks?</item>
+        <item>Why is feature “X” not available?</item>
+        <item>Understanding Task Essence.</item>
+    </string-array>
+
+    <string-array name="help_item_answers">
+        <item>No, once tasks are entered, or marked as complete, they are set in stone. This is part of the design philosophy of Task Essence. Every action is meant to be deliberate and thought out.</item>
+        <item>The maximum number of tasks you can enter is three. The minimum number of tasks that can be entered is one. However, this number is determined by how well you are completing your daily tasks.</item>
+        <item>If you find a bug, please contact me and provide as much information as possible. Contact information can be found in the Help and Feedback screen. In order for me to fix a bug, I must first be able to reproduce and diagnose the bug. The more information you provide, the more likely I will be able to find and fix the issue. The following information is recommended:</item>
+        <item>You can only enter tasks once per day. If you complete your entered tasks for the day you must wait until the tasks reset in order to enter new tasks. By default the tasks are set to reset at midnight everyday.</item>
+        <item>If you believe that Task Essence is missing an essential feature, please contact me with your idea. Contact information can be found in the Help and Feedback screen. However, do note that Task Essence is meant to be fast and simple. If features do not align with the Task Essence design philosophy, they will not be included in the app.</item>
+        <item>In order to efficiently use Task Essence, you need to understand what Task Essence is. Task Essence is more than an app, it is a philosophy.</item>
+    </string-array>
+
+</resources>

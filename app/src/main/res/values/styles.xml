@@ -1,0 +1,120 @@
+<resources xmlns:app="http://schemas.android.com/tools" xmlns:android="urn:oasis:names:tc:xliff:document:1.2">
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorCardViewConfirm">?colorAccent</item>
+        <item name="colorFlowerStones">@color/stones</item>
+        <item name="colorFlowerPetalsWilted">@color/flower_petals_wilted</item>
+        <item name="colorFlowerBudWilted">@color/flower_bud_wilted</item>
+        <item name="colorFlowerStemWilted">?colorFlowerBudWilted</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <style name="BaseAppTheme.Dark" parent="BaseAppTheme">
+        <item name="colorPrimary">@color/darkThemeColorPrimary</item>
+        <item name="colorPrimaryAlternate">@color/darkThemeColorPrimaryAlternate</item>
+        <item name="colorPrimaryDark">@color/darkThemeColorPrimaryDark</item>
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="colorSeparator">@color/white_12</item>
+        <item name="android:textColorPrimary">?textColorPrimary</item>
+        <item name="android:textColorSecondary">?textColorSecondary</item>
+        <item name="android:textColorTertiary">?textColorTertiary</item>
+        <item name="textColorPrimary">@color/white</item>
+        <item name="textColorSecondary">@color/white_70</item>
+        <item name="textColorTertiary">@color/white_50</item>
+        <item name="colorCardViewSelected">?colorPrimary</item>
+        <item name="colorCardViewNotSelectable">?colorCardViewSelected</item>
+        <item name="textColorPrimaryCardView">?textColorPrimary</item>
+        <item name="textColorSecondaryCardView">?textColorTertiary</item>
+        <item name="android:itemBackground">?colorPrimary</item>
+        <item name="colorFlowerTrace">@color/flower_trace_dark_theme</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowCustom</item>
+        <item name="android:divider">?colorSeparator</item>
+    </style>
+
+    <style name="BaseAppTheme.Light" parent="BaseAppTheme">
+        <item name="colorPrimary">@color/lightThemeColorPrimary</item>
+        <item name="colorPrimaryAlternate">@color/lightThemeColorPrimaryAlternate</item>
+        <item name="colorPrimaryDark">@color/lightThemeColorPrimaryDark</item>
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="colorSeparator">@color/black_12</item>
+        <item name="android:textColorPrimary">?textColorPrimary</item>
+        <item name="android:textColorSecondary">?textColorSecondary</item>
+        <item name="android:textColorTertiary">?textColorTertiary</item>
+        <item name="textColorPrimary">@color/black_87</item>
+        <item name="textColorSecondary">@color/black_54</item>
+        <item name="textColorTertiary">@color/black_38</item>
+        <item name="colorCardViewSelected">?colorPrimary</item>
+        <item name="colorCardViewNotSelectable">?colorCardViewSelected</item>
+        <item name="textColorPrimaryCardView">@color/white</item>
+        <item name="textColorSecondaryCardView">?textColorTertiary</item>
+        <item name="android:itemBackground">?colorPrimary</item>
+        <item name="colorFlowerTrace">@color/flower_trace_light_theme</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowCustom</item>
+        <item name="android:divider">?colorSeparator</item>
+    </style>
+
+    <style name="BaseAppTheme.Light.NoActionBar" parent="BaseAppTheme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BaseAppTheme.Dark.NoActionBar" parent="BaseAppTheme.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="OverFlowCustom" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_overflow_24dp</item>
+    </style>
+
+    <style name="TimePickerLight" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/lightThemeColorPrimary</item>
+        <item name="colorPrimaryAlternate">@color/lightThemeColorPrimaryAlternate</item>
+        <item name="colorPrimaryDark">@color/lightThemeColorPrimaryDark</item>
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="colorSeparator">@color/black_12</item>
+        <item name="android:textColorPrimary">?textColorPrimary</item>
+        <item name="android:textColorSecondary">?textColorSecondary</item>
+        <item name="android:textColorTertiary">?textColorTertiary</item>
+        <item name="textColorPrimary">@color/black_87</item>
+        <item name="textColorSecondary">@color/black_54</item>
+        <item name="textColorTertiary">@color/black_38</item>
+        <item name="android:itemBackground">?colorPrimary</item>
+        <item name="android:divider">?colorSeparator</item>
+        <item name="colorControlNormal">?colorAccent</item>
+        <item name="textColorAlertDialogListItem">?colorAccent</item>
+        <item name="colorControlActivated">?colorAccent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="TimePickerDark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/darkThemeColorPrimary</item>
+        <item name="colorPrimaryAlternate">@color/darkThemeColorPrimaryAlternate</item>
+        <item name="colorPrimaryDark">@color/darkThemeColorPrimaryDark</item>
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="colorSeparator">@color/white_12</item>
+        <item name="android:textColorPrimary">?textColorPrimary</item>
+        <item name="android:textColorSecondary">?textColorSecondary</item>
+        <item name="android:textColorTertiary">?textColorTertiary</item>
+        <item name="textColorPrimary">@color/white</item>
+        <item name="textColorSecondary">@color/white_70</item>
+        <item name="textColorTertiary">@color/white_50</item>
+        <item name="colorCardViewSelected">?colorPrimary</item>
+        <item name="colorCardViewNotSelectable">?colorCardViewSelected</item>
+        <item name="textColorPrimaryCardView">?textColorPrimary</item>
+        <item name="textColorSecondaryCardView">?textColorTertiary</item>
+        <item name="android:itemBackground">?colorPrimary</item>
+        <item name="colorFlowerTrace">@color/flower_trace_dark_theme</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowCustom</item>
+        <item name="android:divider">?colorSeparator</item>
+        <item name="colorControlNormal">?colorAccent</item>
+        <item name="textColorAlertDialogListItem">?colorAccent</item>
+        <item name="colorControlActivated">?colorAccent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

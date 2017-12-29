@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="21sp"
+        android:textColor="?textColorPrimary"
+        android:textStyle="bold"
+        android:text="Understanding Task Essence."
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="?textColorPrimary"
+        android:text="In order to efficiently use Task Essence, you need to understand what Task Essence is. Task Essence is more than an app, it is a philosophy."
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="?textColorPrimary"
+        android:text="Philosophy"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="If you are anything like me, you make long to-do lists that are inevitably lost or forgotten. If the list does remain in use, it seems that the items that get checked off are the most simple ones. The list ends up with all the little less-important items completed (such as take out the trash, fill up car with gas, etc.) and the important items (such as complete novel, learn guitar, etc.) go essentially ignored. The reason for this seems to be two-part. First, there is a small amount of joy we get from checking items of a list. Second, it is difficult to focus on and complete large complex tasks. Both of these points push us towards completing the small and often less important tasks." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="In a bid to keep my tasks list close and easily accessible, I tried many task list apps. While these were certainly more accessible than a paper list, they seemed to introduce a few new issues. First, they all seemed to have feature overload. While the features certainly have their uses, it does make the app unnecessarily complex and bloated. This ties into the second issue, which is that it takes longer than necessary to enter tasks. So why are these issues? The problem is that it makes us less likely to actually enter tasks." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="We can sum up the above paragraphs as follows:" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="1) "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Eliminate unnecessary tasks" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="2) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Break up large important tasks into smaller tackle-able tasks" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="3) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Make the app easy to use" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="4) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Make entering tasks quick" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="?textColorPrimary"
+        android:text="Implementation and Use"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="Task Essence eliminates unnecessary tasks by limiting the number of tasks that can be entered. It leads you into entering only the tasks that are most important. The maximum number of tasks that can be entered is limited to a maximum of three, and a minimum of one." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="Task Essence also promotes the breaking up of large tasks into smaller more manageable tasks. It accomplishes this by being a daily task list. Therefore you pointed towards entering tasks that can be completed in a single day, which is inherently more manageable. If you show consistency in failing your tasks, Task Essence assumes that you are not breaking up your tasks into manageable bites, or trying to do more than you are capable of in a single day. It will remove a task, down to the minimum. The reverse is also true. If you complete everything consistently, it will add a task, up to the maximum." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="There is no unnecessary features in Task Essence. This makes it both quick and easy to use. There is no calendar, you do not enter a location or time for each task, no notes, and nothing to distract you from completing your tasks. You may notice that when you enter tasks, your entries are limited in the number of characters that you can enter. This prevents you from entering unnecessarily long entries, and makes you more deliberate in each entry." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="A common use-case, and an example of how I use Task Essence is as follows:" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="1) "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Wake up and open Task Essence." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="2) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Determine what I need to accomplish for the day. I do this by looking at a major goal or project I am working on, and then breaking it into pieces that are manageable, but that will show progress towards the end goal. I determine if these pieces are good by asking myself 'If I complete these tasks, will I be able to sleep tonight knowing that I made good progress towards my goal?'" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="3) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Enter the tasks. An example would be:" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="Task 1: " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Complete Task Essence help article" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="Task 2: " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Make icon for Task Essence" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="Task 3: " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Write Play Store listing for Task Essence" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="4) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Mark off tasks as I complete them during the day." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="5) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="After all tasks are completed, I close out Task Essence and forget about it for the rest of the day." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:text="6) " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?textColorPrimary"
+            android:text="Enjoy the remainder of my day." />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"
+        android:textColor="?textColorPrimary"
+        android:text="That is basically it. As you can see, it is not complicated at all. Task Essence helps me focus on what is important, but it also stays out of the way. Hopefully Task Essence does the same for you." />
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.madabysslabs.app.taskessence.EnterTasksView"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/tasks_enter_view_background"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="?textColorTertiary"
+                app:counterEnabled="true"
+                app:counterMaxLength="@integer/max_characters">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText1"
+                    android:textColor="?textColorPrimary"
+                    app:backgroundTint="?textColorTertiary"
+                    android:textColorHint="?textColorTertiary"
+                    android:typeface="normal"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:maxLength="@integer/max_characters" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                android:textColorHint="?textColorTertiary"
+                app:counterMaxLength="@integer/max_characters"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText2"
+                    android:typeface="normal"
+                    android:textColor="?textColorPrimary"
+                    app:backgroundTint="?textColorTertiary"
+                    android:textColorHint="?textColorTertiary"
+                    android:maxLength="@integer/max_characters"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="?textColorTertiary"
+                app:counterEnabled="true"
+                app:counterMaxLength="@integer/max_characters">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText3"
+                    android:typeface="normal"
+                    android:textColor="?textColorPrimary"
+                    app:backgroundTint="?textColorTertiary"
+                    android:textColorHint="?textColorTertiary"
+                    android:maxLength="@integer/max_characters"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

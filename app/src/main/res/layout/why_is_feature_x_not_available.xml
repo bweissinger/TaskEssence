@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="21sp"
+        android:textColor="?textColorPrimary"
+        android:textStyle="bold"
+        android:text="Why is feature “X” not available?"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="?textColorPrimary"
+        android:text="If you believe that Task Essence is missing an essential feature, please contact me with your idea. Contact information can be found in the Help and Feedback screen. However, do note that Task Essence is meant to be fast and simple. If features do not align with the Task Essence design philosophy, they will not be included in the app." />
+
+</LinearLayout>

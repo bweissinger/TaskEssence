@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textColorPrimary" format="reference" />
+    <attr name="textColorSecondary" format="reference" />
+    <attr name="textColorTertiary" format="reference" />
+    <attr name="colorBackground" format="reference" />
+    <attr name="colorSeparator" format="reference" />
+    <attr name="colorPrimaryAlternate" format="reference" />
+    <attr name="colorCardViewConfirm" format="reference" />
+    <attr name="colorCardViewSelected" format="reference" />
+    <attr name="colorCardViewNotSelectable" format="reference" />
+    <attr name="textColorPrimaryCardView" format="reference" />
+    <attr name="textColorSecondaryCardView" format="reference" />
+    <attr name="colorFlowerStones" format="reference" />
+    <attr name="colorFlowerPetalsWilted" format="reference" />
+    <attr name="colorFlowerBudWilted" format="reference" />
+    <attr name="colorFlowerStemWilted" format="reference" />
+    <attr name="colorFlowerTrace" format="reference" />
+    <attr name="timePickerStyle" format="reference" />
+</resources>
