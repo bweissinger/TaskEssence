@@ -88,7 +88,8 @@ public class TasksNotCompleted extends BaseFragment {
         TypedValue typedValue = new TypedValue();
         Resources.Theme theme = getActivity().getTheme();
 
-        theme.resolveAttribute(R.attr.colorFlowerTrace, typedValue, true);
+        //Set trace color from the color specified in the theme
+        theme.resolveAttribute(R.attr.colorIconTrace, typedValue, true);
         svgView.setTraceColor(typedValue.data);
 
         svgView.start();

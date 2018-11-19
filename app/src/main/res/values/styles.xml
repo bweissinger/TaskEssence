@@ -4,10 +4,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="colorCardViewConfirm">?colorAccent</item>
-        <item name="colorFlowerStones">@color/stones</item>
-        <item name="colorFlowerPetalsWilted">@color/flower_petals_wilted</item>
-        <item name="colorFlowerBudWilted">@color/flower_bud_wilted</item>
-        <item name="colorFlowerStemWilted">?colorFlowerBudWilted</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
@@ -28,7 +24,7 @@
         <item name="textColorPrimaryCardView">?textColorPrimary</item>
         <item name="textColorSecondaryCardView">?textColorTertiary</item>
         <item name="android:itemBackground">?colorPrimary</item>
-        <item name="colorFlowerTrace">@color/flower_trace_dark_theme</item>
+        <item name="colorIconTrace">@color/icon_trace_dark_theme</item>
         <item name="android:actionOverflowButtonStyle">@style/OverFlowCustom</item>
         <item name="android:divider">?colorSeparator</item>
     </style>
@@ -50,7 +46,7 @@
         <item name="textColorPrimaryCardView">@color/white</item>
         <item name="textColorSecondaryCardView">?textColorTertiary</item>
         <item name="android:itemBackground">?colorPrimary</item>
-        <item name="colorFlowerTrace">@color/flower_trace_light_theme</item>
+        <item name="colorIconTrace">@color/icon_trace_light_theme</item>
         <item name="android:actionOverflowButtonStyle">@style/OverFlowCustom</item>
         <item name="android:divider">?colorSeparator</item>
     </style>
@@ -108,7 +104,7 @@
         <item name="textColorPrimaryCardView">?textColorPrimary</item>
         <item name="textColorSecondaryCardView">?textColorTertiary</item>
         <item name="android:itemBackground">?colorPrimary</item>
-        <item name="colorFlowerTrace">@color/flower_trace_dark_theme</item>
+        <item name="colorIconTrace">@color/icon_trace_dark_theme</item>
         <item name="android:actionOverflowButtonStyle">@style/OverFlowCustom</item>
         <item name="android:divider">?colorSeparator</item>
         <item name="colorControlNormal">?colorAccent</item>

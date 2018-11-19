@@ -10,40 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/task_not_completed_svg_view_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/task_not_completed_text_view"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin">
-
-            <!-- Set animatedSvgImageSize x and y to viewport size in svg file -->
-            <com.jaredrummler.android.widget.AnimatedSvgView
-                android:id="@+id/animated_svg_view_tasks_not_completed"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                app:animatedSvgFillColors="@array/tasks_not_completed_fill_colors"
-                app:animatedSvgTraceResidueColors="@array/tasks_not_completed_trace_residue_colors"
-                app:animatedSvgGlyphStrings="@array/tasks_not_completed_icon_data"
-                app:animatedSvgTraceMarkerLength="25"
-                app:animatedSvgFillStart="2000"
-                app:animatedSvgFillTime="1000"
-                app:animatedSvgImageSizeX="210"
-                app:animatedSvgImageSizeY="210"
-                app:animatedSvgTraceTime="2000"
-                app:animatedSvgTraceTimePerGlyph="1000"/>
-
-        </RelativeLayout>
-
         <TextView
             android:id="@+id/task_not_completed_text_view"
             android:layout_below="@id/toolbar"
@@ -81,6 +47,26 @@
             android:text="Tap to continue..."
             android:textAlignment="center"
             android:textColor="?textColorSecondary"/>
+
+        <!-- Set animatedSvgImageSize x and y to viewport size in svg file -->
+        <com.jaredrummler.android.widget.AnimatedSvgView
+            android:id="@+id/animated_svg_view_tasks_not_completed"
+            android:layout_below="@id/task_not_completed_continue_text"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/activity_margin"
+            app:animatedSvgFillColors="@array/tasks_not_completed_animated_svg_color"
+            app:animatedSvgTraceResidueColors="@array/tasks_not_completed_animated_svg_color"
+            app:animatedSvgGlyphStrings="@array/tasks_not_completed_icon_data"
+            app:animatedSvgTraceMarkerLength="25"
+            app:animatedSvgFillStart="2500"
+            app:animatedSvgFillTime="1000"
+            app:animatedSvgImageSizeX="1000"
+            app:animatedSvgImageSizeY="1000"
+            app:animatedSvgTraceTime="2500"
+            app:animatedSvgTraceTimePerGlyph="2500"/>
 
     </RelativeLayout>
 

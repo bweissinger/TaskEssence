@@ -24,10 +24,13 @@
     <color name="taskColor4">#AED581</color>
     <color name="taskColor5">#FFB74D</color>
 
-    <!-- Accent color and various opacity of black and white (according to material design guidelines)
+    <!-- Accent color, other colors, and various opacity of black and white (according to material design guidelines)
     Accent color: Green A700
+    Error color: Baseline error code for google material design (#B00020)
     -->
     <color name="colorAccent">#00C853</color>
+    <color name="success">#00C853</color>
+    <color name="error">#B00020</color>
     <color name="white">#FFFFFF</color>
     <color name="white_70">#B3FFFFFF</color>
     <color name="white_50">#7BFFFFFF</color>
@@ -38,14 +41,8 @@
     <color name="black_38">#61000000</color>
     <color name="black_12">#1F000000</color>
 
-    <!-- Colors specifically for animated flower design, same for both themes -->
-    <color name="stones">#c9ac7f</color>
-    <color name="flower_petals_wilted">#C6806A</color>
-    <color name="flower_bud_wilted">#E4C837</color>
-    <color name="flower_stem_wilted">#E4C837</color>
-
-    <!-- Colors specifically for animated flower trace, different for both -->
-    <color name="flower_trace_dark_theme">#EEEEEE</color>
-    <color name="flower_trace_light_theme">#212121</color>
+    <!-- Colors specifically for animated icon trace, different for both -->
+    <color name="icon_trace_dark_theme">#EEEEEE</color>
+    <color name="icon_trace_light_theme">#212121</color>
 
 </resources>

@@ -11,10 +11,6 @@
     <attr name="colorCardViewNotSelectable" format="reference" />
     <attr name="textColorPrimaryCardView" format="reference" />
     <attr name="textColorSecondaryCardView" format="reference" />
-    <attr name="colorFlowerStones" format="reference" />
-    <attr name="colorFlowerPetalsWilted" format="reference" />
-    <attr name="colorFlowerBudWilted" format="reference" />
-    <attr name="colorFlowerStemWilted" format="reference" />
-    <attr name="colorFlowerTrace" format="reference" />
+    <attr name="colorIconTrace" format="reference" />
     <attr name="timePickerStyle" format="reference" />
 </resources>

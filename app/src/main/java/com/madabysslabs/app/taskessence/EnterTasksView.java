@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -280,6 +281,7 @@ public class EnterTasksView extends BaseFragment {
     }
 
     private void setAlarm(AppPreferences appPreferences){
+
         Calendar calNow = Calendar.getInstance();
         Calendar calSet = (Calendar) calNow.clone();
         Calendar selectedResetTime = appPreferences.getSelectedResetTime();
@@ -302,16 +304,21 @@ public class EnterTasksView extends BaseFragment {
 
                 calSet.set(Calendar.HOUR_OF_DAY, selectedResetTime.get(Calendar.HOUR_OF_DAY));
                 calSet.set(Calendar.MINUTE, selectedResetTime.get(Calendar.MINUTE));
-
-                //Sets alarm one day ahead if time has already passed
-                if (calSet.compareTo(calNow) <= 0) {
-                    //Today Set time passed, count to tomorrow
-                    calSet.add(Calendar.DATE, 1);
-                }
             }
+
             //Now change the reset time to the time that was selected
             appPreferences.setResetTime(selectedResetTime);
         }
+
+        //Sets alarm one day ahead if time has already passed
+        if (calSet.before(calNow)) {
+            //Today Set time passed, count to tomorrow
+            calSet.add(Calendar.DATE, 1);
+        }
+
+        System.out.println("Set: " + calSet.getTime().toString());
+        System.out.println("Date: " + calNow.getTime().toString());
+
 
         MyAlarm myAlarm = new MyAlarm();
         myAlarm.setAlarm(this.getContext(), calSet);

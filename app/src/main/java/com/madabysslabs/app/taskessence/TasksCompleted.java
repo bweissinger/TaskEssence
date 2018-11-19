@@ -4,9 +4,9 @@ package com.madabysslabs.app.taskessence;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.jaredrummler.android.widget.AnimatedSvgView;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -86,22 +87,10 @@ public class TasksCompleted extends BaseFragment {
         TypedValue typedValue = new TypedValue();
         Resources.Theme theme = getActivity().getTheme();
 
-        theme.resolveAttribute(R.attr.colorFlowerTrace, typedValue, true);
+        //Set trace color from the color specified in the theme
+        theme.resolveAttribute(R.attr.colorIconTrace, typedValue, true);
         svgView.setTraceColor(typedValue.data);
 
-        int[] colors = getResources().getIntArray(R.array.tasks_completed_fill_colors);
-
-        //Set flower to task colors
-        if(tasks.size() == 3){
-            for(int i = 0; i < tasks.size() && i + 3 < colors.length; i++){
-                theme.resolveAttribute(R.attr.colorFlowerStones, typedValue, true);
-                colors[i] = typedValue.data;
-                colors[i + 3] = ContextCompat.getColor(getContext(), tasks.get(i).getColorId());
-            }
-        }
-
-        svgView.setTraceResidueColors(colors);
-        svgView.setFillColors(colors);
         svgView.start();
     }
 
