@@ -48,7 +48,8 @@ public class TasksCompleted extends BaseFragment {
         }
 
         //Set text displays for the view
-        setTextView((TextView) view.findViewById(R.id.task_completed_text_view));
+        TextView textView = view.findViewById(R.id.task_completed_text_view);
+        textView.setText("Excellent!");
         setResetDateText((TextView) view.findViewById(R.id.task_completed_reset_date));
 
         // Inflate the layout for this fragment
@@ -61,20 +62,6 @@ public class TasksCompleted extends BaseFragment {
         String date = dateFormat.format(appPreferences.getAlarmDate().getTime());
 
         dateText.setText("Reset: " + date);
-    }
-
-    private void setTextView(TextView textView){
-        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
-        int numTimesInRowCompletedTasks = appPreferences.getTimesInRowCompletedTasks();
-
-        //Unlike tasks not completed text view, the numTimesInRowCompletedTasks is set on the
-        //previous screen.
-        if(numTimesInRowCompletedTasks >= 3){
-            textView.setText("You have gained a task.");
-        }
-        else{
-            textView.setText("Excellent!");
-        }
     }
 
     private void initiateAnimatedSVG(AnimatedSvgView svgView){
