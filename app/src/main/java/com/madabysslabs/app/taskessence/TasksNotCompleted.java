@@ -69,18 +69,7 @@ public class TasksNotCompleted extends BaseFragment {
         //Set text to indicate if a task has been removed
         TextView textView = (TextView) view.findViewById(R.id.task_not_completed_text_view);
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
-        int numTimesInRowFailedTasks = appPreferences.getTimesInRowFailedTasks();
-
-        /*
-        *numTimesInRowFailedTasks text prompts logic is set to trigger at one less than normal,
-        *at 1 instead of 2, because it isn't increased until the user navigates away from the screen
-        */
-        if(numTimesInRowFailedTasks >= 1){
-            textView.setText("You have lost a task.");
-        }
-        else{
-            textView.setText("You have failed.");
-        }
+        textView.setText("You have failed.");
     }
 
     private void initiateAnimatedSVG(AnimatedSvgView svgView){
@@ -101,10 +90,6 @@ public class TasksNotCompleted extends BaseFragment {
         //Reset status of tasks
         appPreferences.setTasksEntered(false);
         appPreferences.setTasksCompleted(false);
-
-        //reset task completed streak and add day to tasks not completed streak
-        appPreferences.setTimesInRowFailedTasks((appPreferences.getTimesInRowFailedTasks() + 1));
-        appPreferences.setTimesInRowCompletedTasks(0);
 
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(EnterTasksViewKey.create());
     }
