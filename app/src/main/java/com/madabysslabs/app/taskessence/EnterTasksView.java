@@ -144,38 +144,12 @@ public class EnterTasksView extends BaseFragment {
             });
         }
 
-        int timesInRowCompletedTasks = appPreferences.getTimesInRowCompletedTasks();
-        int timesInRowFailedTasks = appPreferences.getTimesInRowFailedTasks();
-        int numTasksAvailable = appPreferences.getNumTasksAvailable();
-
-        if(timesInRowCompletedTasks >= 3){
-            if(numTasksAvailable < 3){
-                numTasksAvailable++;
-                appPreferences.setNumTasksAvailable(numTasksAvailable);
-            }
-            appPreferences.setTimesInRowCompletedTasks(0);
-        }
-        if(timesInRowFailedTasks >= 2){
-            if(numTasksAvailable > 1){
-                numTasksAvailable--;
-                appPreferences.setNumTasksAvailable(numTasksAvailable);
-            }
-            appPreferences.setTimesInRowFailedTasks(0);
-        }
-
         //Now set tasks availability
         for(int i = 0; i < editTextList.length; i++){
-            if (numTasksAvailable <= 0) {
-                editTextList[i].setEnabled(false);
-                editTextList[i].setHint("You have lost this task.");
-            }
-            else {
-                editTextList[i].setEnabled(true);
-                editTextList[i].setHint("Enter " +
-                        UtilityClass.convertWholeNumberToPlace(i + 1, false) +
-                        " task.");
-            }
-            numTasksAvailable--;
+            editTextList[i].setEnabled(true);
+            editTextList[i].setHint("Enter " +
+                    UtilityClass.convertWholeNumberToPlace(i + 1, false) +
+                    " task.");
         }
     }
 
@@ -211,13 +185,8 @@ public class EnterTasksView extends BaseFragment {
                 taskItems.add(new TaskItem(iterString, colors[i], false, editTextList[i].isEnabled()));
             }
             else{
-                //Determine if user did not input a task or if it was not available
-                if(editTextList[i].isEnabled()){
-                    taskItems.add(new TaskItem("Task not added.", colors[i], true, editTextList[i].isEnabled()));
-                }
-                else{
-                    taskItems.add(new TaskItem("You have lost this task.", colors[i], true, editTextList[i].isEnabled()));
-                }
+                //User did not input a task
+                taskItems.add(new TaskItem("Task not added.", colors[i], true, editTextList[i].isEnabled()));
             }
         }
     }
