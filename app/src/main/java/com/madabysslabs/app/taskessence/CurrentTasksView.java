@@ -65,10 +65,6 @@ public class CurrentTasksView extends BaseFragment {
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         appPreferences.setTasksCompleted(true);
 
-        //add a day to the completed streak and reset the did not complete streak
-        appPreferences.setTimesInRowCompletedTasks((appPreferences.getTimesInRowCompletedTasks() + 1));
-        appPreferences.setTimesInRowFailedTasks(0);
-
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(TasksCompletedKey.create());
     }
 
