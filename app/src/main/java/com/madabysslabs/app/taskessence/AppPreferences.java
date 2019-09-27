@@ -38,11 +38,11 @@ public class AppPreferences {
 
     public ArrayList<TaskItem> getTaskList() {
         ArrayList<TaskItem> listItems = new ArrayList<TaskItem>();
-        int listSize = _sharedPrefs.getInt(KEY_PREFS_TASK_LIST_SIZE, 0);
+        int listSize = _sharedPrefs.getInt(KEY_PREFS_TASK_LIST_SIZE, 3);
         for (int i = 0; i < listSize; i++){
             String itemString = _sharedPrefs.getString(KEY_PREFS_TASK + i, "");
             int itemColorId = _sharedPrefs.getInt(KEY_PREFS_TASK_COLOR + i, 0);
-            boolean isCompleted = _sharedPrefs.getBoolean(KEY_PREFS_TASK_COMPLETED + i, false);
+            boolean isCompleted = _sharedPrefs.getBoolean(KEY_PREFS_TASK_COMPLETED + i, true);
             boolean isAvailable = _sharedPrefs.getBoolean(KEY_PREFS_TASK_AVAILABLE + i, true);
 
             listItems.add(new TaskItem(itemString, itemColorId, isCompleted, isAvailable));

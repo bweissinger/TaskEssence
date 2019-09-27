@@ -34,6 +34,7 @@ public class CurrentTasksView extends BaseFragment {
         //Get saved task list
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         taskItems = appPreferences.getTaskList();
+        appPreferences.setTasksCompleted(false);
         cards = new ArrayList<TaskCard>();
         initTaskCards(rootView);
 
