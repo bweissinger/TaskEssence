@@ -62,10 +62,12 @@ public class EnterTasksView extends BaseFragment {
 
         final View rootView = inflater.inflate(R.layout.fragment_enter_tasks_view, container, false);
 
-        taskItems = new ArrayList<TaskItem>();
+        //Fetch task list
+        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+        taskItems = appPreferences.getTaskList();
+
         referenceEditTextFields(rootView);
         checkEditTextFields();
-        loadTempTaskList();
 
         //Background gets focus on click and hides keyboard
         tasksEnterBackground = (LinearLayout) rootView.findViewById(R.id.tasks_enter_view_background);
@@ -144,38 +146,18 @@ public class EnterTasksView extends BaseFragment {
             });
         }
 
-        int timesInRowCompletedTasks = appPreferences.getTimesInRowCompletedTasks();
-        int timesInRowFailedTasks = appPreferences.getTimesInRowFailedTasks();
-        int numTasksAvailable = appPreferences.getNumTasksAvailable();
-
-        if(timesInRowCompletedTasks >= 3){
-            if(numTasksAvailable < 3){
-                numTasksAvailable++;
-                appPreferences.setNumTasksAvailable(numTasksAvailable);
-            }
-            appPreferences.setTimesInRowCompletedTasks(0);
-        }
-        if(timesInRowFailedTasks >= 2){
-            if(numTasksAvailable > 1){
-                numTasksAvailable--;
-                appPreferences.setNumTasksAvailable(numTasksAvailable);
-            }
-            appPreferences.setTimesInRowFailedTasks(0);
-        }
-
         //Now set tasks availability
         for(int i = 0; i < editTextList.length; i++){
-            if (numTasksAvailable <= 0) {
-                editTextList[i].setEnabled(false);
-                editTextList[i].setHint("You have lost this task.");
-            }
-            else {
+            if(taskItems.get(i).isCompleted()){
                 editTextList[i].setEnabled(true);
                 editTextList[i].setHint("Enter " +
                         UtilityClass.convertWholeNumberToPlace(i + 1, false) +
                         " task.");
             }
-            numTasksAvailable--;
+            else{
+                editTextList[i].setEnabled(false);
+                editTextList[i].setHint(taskItems.get(i).getTaskString());
+            }
         }
     }
 
@@ -190,7 +172,7 @@ public class EnterTasksView extends BaseFragment {
         Boolean editTextIsEmpty = true;
         for (int i = 0; i < editTextList.length; i++) {
             String iterString = editTextList[i].getText().toString();
-            if (!TextUtils.isEmpty(iterString)) {
+            if (!TextUtils.isEmpty(iterString) || !editTextList[i].isEnabled()) {
                 editTextIsEmpty = false;
             }
         }
@@ -204,20 +186,18 @@ public class EnterTasksView extends BaseFragment {
 
     private void setTaskList(){
         TaskColors colorPicker = new TaskColors();
-        int[] colors = colorPicker.getTaskColors(editTextList.length);
-        for (int i = 0; i < editTextList.length; i++) {
+        int[] colors = colorPicker.getTaskColors(taskItems.size());
+        for (int i = 0; i < taskItems.size(); i++) {
             String iterString = editTextList[i].getText().toString();
             if (!TextUtils.isEmpty(iterString)) {
-                taskItems.add(new TaskItem(iterString, colors[i], false, editTextList[i].isEnabled()));
+                taskItems.set(i, new TaskItem(iterString, colors[i], false, true));
+            }
+            else if (taskItems.get(i).isCompleted()){
+                //User did not input a task
+                taskItems.set(i, new TaskItem("Task not added.", colors[i], true, true));
             }
             else{
-                //Determine if user did not input a task or if it was not available
-                if(editTextList[i].isEnabled()){
-                    taskItems.add(new TaskItem("Task not added.", colors[i], true, editTextList[i].isEnabled()));
-                }
-                else{
-                    taskItems.add(new TaskItem("You have lost this task.", colors[i], true, editTextList[i].isEnabled()));
-                }
+                taskItems.set(i, new TaskItem(taskItems.get(i).getTaskString(), colors[i], false, true));
             }
         }
     }
@@ -247,17 +227,9 @@ public class EnterTasksView extends BaseFragment {
     public void onResume(){
         super.onResume();
 
-        loadTempTaskList();
-        checkEditTextFields();
-    }
-
-    private void loadTempTaskList(){
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+        taskItems = appPreferences.getTaskList();
 
-        ArrayList<String> tempTaskList = appPreferences.getTempTaskList();
-        for(int i = 0; i < tempTaskList.size() && i < editTextList.length; i++){
-            editTextList[i].setText(tempTaskList.get(i));
-        }
         checkEditTextFields();
     }
 
@@ -266,18 +238,7 @@ public class EnterTasksView extends BaseFragment {
         super.onPause();
 
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
-        if(!appPreferences.tasksAreEntered()){
-
-            //Create temp task list and get text fields and save to shared prefs
-            ArrayList<String> tempTaskList= new ArrayList<String>();
-
-            for (int i = 0; i < editTextList.length; i++) {
-                String iterString = editTextList[i].getText().toString();
-                tempTaskList.add(i, iterString);
-            }
-
-            appPreferences.saveTempTaskList(tempTaskList);
-        }
+        appPreferences.saveTaskList(taskItems);
     }
 
     private void setAlarm(AppPreferences appPreferences){
@@ -325,16 +286,10 @@ public class EnterTasksView extends BaseFragment {
     }
 
     private void tasksEntered(){
-        //Null temp task list in app prefs
-        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
-        ArrayList<String> tempTaskList = appPreferences.getTempTaskList();
-        for(int i = 0; i < tempTaskList.size(); i++){
-            tempTaskList.set(i, "");
-        }
-        appPreferences.saveTempTaskList(tempTaskList);
-
         //Set and save task list, then continue to Current Tasks View fragment
         setTaskList();
+
+        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         appPreferences.saveTaskList(taskItems);
         appPreferences.setTasksEntered(true);
 
