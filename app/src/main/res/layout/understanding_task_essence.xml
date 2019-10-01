@@ -37,7 +37,7 @@
         android:textSize="14sp"
         android:paddingBottom="16dp"
         android:textColor="?textColorPrimary"
-        android:text="If you are anything like me, you make long to-do lists that are inevitably lost or forgotten. If the list does remain in use, it seems that the items that get checked off are the most simple ones. The list ends up with all the little less-important items completed (such as take out the trash, fill up car with gas, etc.) and the important items (such as complete novel, learn guitar, etc.) go essentially ignored. The reason for this seems to be two-part. First, there is a small amount of joy we get from checking items of a list. Second, it is difficult to focus on and complete large complex tasks. Both of these points push us towards completing the small and often less important tasks." />
+        android:text="If you are anything like me, you make long to-do lists that are inevitably lost or forgotten. If the list remains in use, it seems that the items that get checked off are the most simple ones. The list ends up with all the little less-important items completed (such as take out the trash, fill up car with gas, etc.) and the important items (such as complete novel, learn guitar, etc.) go essentially ignored. The reason for this seems to be two-part. First, there is a small amount of joy we get from checking items of a list. Second, it is difficult to focus on and complete large complex tasks. Both of these points push us towards completing the small and often less important tasks." />
 
     <TextView
         android:layout_width="wrap_content"
@@ -162,7 +162,7 @@
         android:textSize="14sp"
         android:paddingBottom="16dp"
         android:textColor="?textColorPrimary"
-        android:text="Task Essence eliminates unnecessary tasks by limiting the number of tasks that can be entered. It leads you into entering only the tasks that are most important. The maximum number of tasks that can be entered is limited to a maximum of three, and a minimum of one." />
+        android:text="Task Essence eliminates unnecessary tasks by limiting the number of tasks that can be entered. It leads you into entering only the tasks that are most important. The number of tasks that can be entered is limited to a maximum of three, and all unfinished tasks will carry over into the next list." />
 
     <TextView
         android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
         android:textSize="14sp"
         android:paddingBottom="16dp"
         android:textColor="?textColorPrimary"
-        android:text="Task Essence also promotes the breaking up of large tasks into smaller more manageable tasks. It accomplishes this by being a daily task list. Therefore you pointed towards entering tasks that can be completed in a single day, which is inherently more manageable. If you show consistency in failing your tasks, Task Essence assumes that you are not breaking up your tasks into manageable bites, or trying to do more than you are capable of in a single day. It will remove a task, down to the minimum. The reverse is also true. If you complete everything consistently, it will add a task, up to the maximum." />
+        android:text="Task Essence also promotes the breaking up of large tasks into smaller more manageable tasks. It accomplishes this by being a daily task list. Therefore you pointed towards entering tasks that can be completed in a single day, which is inherently more manageable. By carrying over unfinished tasks into the next day, you are focused on the tasks that are immediately important." />
 
     <TextView
         android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
         android:textSize="14sp"
         android:paddingBottom="16dp"
         android:textColor="?textColorPrimary"
-        android:text="There is no unnecessary features in Task Essence. This makes it both quick and easy to use. There is no calendar, you do not enter a location or time for each task, no notes, and nothing to distract you from completing your tasks. You may notice that when you enter tasks, your entries are limited in the number of characters that you can enter. This prevents you from entering unnecessarily long entries, and makes you more deliberate in each entry." />
+        android:text="There are no unnecessary features in Task Essence. This makes it both quick and easy to use. There is no calendar, you do not enter a location or time for each task, no notes, and nothing to distract you from completing your tasks. You may notice that when you enter tasks, your entries are limited in the number of characters that you can enter. This prevents you from entering unnecessarily long entries, and makes you more deliberate in each entry." />
 
     <TextView
         android:layout_width="wrap_content"
@@ -405,6 +405,6 @@
         android:textSize="14sp"
         android:paddingBottom="16dp"
         android:textColor="?textColorPrimary"
-        android:text="That is basically it. As you can see, it is not complicated at all. Task Essence helps me focus on what is important, but it also stays out of the way. Hopefully Task Essence does the same for you." />
+        android:text="That is it. As you can see, it is not complicated at all. Task Essence helps me focus on what is important, but it also stays out of the way. Hopefully Task Essence does the same for you." />
 
 </LinearLayout>

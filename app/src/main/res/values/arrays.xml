@@ -68,7 +68,7 @@
 
     <string-array name="help_item_answers">
         <item>No, once tasks are entered, or marked as complete, they are set in stone. This is part of the design philosophy of Task Essence. Every action is meant to be deliberate and thought out.</item>
-        <item>The maximum number of tasks you can enter is three. The minimum number of tasks that can be entered is one. However, this number is determined by how well you are completing your daily tasks.</item>
+        <item>The maximum number of tasks you can enter is three. If you have uncompleted tasks from the previous list, they will carry over into the new list. This is part of the design philosophy of Task Essence. Read &quot;Understanding Task Essence&quot; for a better understanding of the philosophy.</item>
         <item>If you find a bug, please contact me and provide as much information as possible. Contact information can be found in the Help and Feedback screen. In order for me to fix a bug, I must first be able to reproduce and diagnose the bug. The more information you provide, the more likely I will be able to find and fix the issue. The following information is recommended:</item>
         <item>You can only enter tasks once per day. If you complete your entered tasks for the day you must wait until the tasks reset in order to enter new tasks. By default the tasks are set to reset at midnight everyday.</item>
         <item>If you believe that Task Essence is missing an essential feature, please contact me with your idea. Contact information can be found in the Help and Feedback screen. However, do note that Task Essence is meant to be fast and simple. If features do not align with the Task Essence design philosophy, they will not be included in the app.</item>
