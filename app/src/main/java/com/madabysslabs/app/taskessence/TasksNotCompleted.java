@@ -86,8 +86,7 @@ public class TasksNotCompleted extends BaseFragment {
         svgView.start();
     }
 
-    private void setCompletedTasksStrings(){
-        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+    private void setCompletedTasksStrings(AppPreferences appPreferences){
         ArrayList<TaskItem> tasks = appPreferences.getTaskList();
 
         for (int i = 0; i < tasks.size(); i++){
@@ -105,7 +104,7 @@ public class TasksNotCompleted extends BaseFragment {
         //Reset status of tasks
         appPreferences.setTasksEntered(false);
         appPreferences.setTasksCompleted(false);
-        setCompletedTasksStrings();
+        setCompletedTasksStrings(appPreferences);
 
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(EnterTasksViewKey.create());
     }
