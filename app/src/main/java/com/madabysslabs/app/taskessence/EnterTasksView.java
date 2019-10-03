@@ -208,6 +208,19 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
+    private void setTaskStringsFromTextFields(){
+        for (int i = 0; i < taskItems.size(); i++){
+            TaskItem taskItem = taskItems.get(i);
+            if (taskItem.isCompleted()){
+                taskItems.set(i,
+                        new TaskItem(editTextList[i].getText().toString(),
+                                taskItem.getColorId(),
+                                true,
+                                true));
+            }
+        }
+    }
+
     private void hideKeyboard(){
         //Get activity and hide keyboard
         Activity act = getActivity();
@@ -243,6 +256,8 @@ public class EnterTasksView extends BaseFragment {
     @Override
     public void onPause(){
         super.onPause();
+
+        setTaskStringsFromTextFields();
 
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         appPreferences.saveTaskList(taskItems);
