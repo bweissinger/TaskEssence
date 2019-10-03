@@ -62,8 +62,7 @@ public class CurrentTasksView extends BaseFragment {
         }
     }
 
-    private void allTasksCompleted(){
-        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+    private void allTasksCompleted(AppPreferences appPreferences){
         appPreferences.setTasksCompleted(true);
 
         for (int i = 0; i < taskItems.size(); i++){
@@ -87,7 +86,7 @@ public class CurrentTasksView extends BaseFragment {
 
         //Now check to see if all tasks are completed
         if(appPreferences.tasksAreCompleted()){
-            allTasksCompleted();
+            allTasksCompleted(appPreferences);
         }
     }
 
