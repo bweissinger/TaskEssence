@@ -91,7 +91,7 @@ public class TasksNotCompleted extends BaseFragment {
 
         for (int i = 0; i < tasks.size(); i++){
             if(tasks.get(i).isCompleted()){
-                tasks.set(i, tasks.set(i, new TaskItem("", tasks.get(i).getColorId(), true, true)));
+                tasks.set(i, new TaskItem("", tasks.get(i).getColorId(), true, true));
             }
         }
 
