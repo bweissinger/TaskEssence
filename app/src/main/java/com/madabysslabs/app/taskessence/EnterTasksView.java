@@ -145,18 +145,24 @@ public class EnterTasksView extends BaseFragment {
                 }
             });
         }
+    }
 
-        //Now set tasks availability
+    private void setTextFields(){
         for(int i = 0; i < editTextList.length; i++){
-            if(taskItems.get(i).isCompleted()){
+            String taskString = taskItems.get(i).getTaskString();
+            editTextList[i].setEnabled(true);
+            if (!taskItems.get(i).isCompleted()){
+                editTextList[i].setEnabled(false);
+                editTextList[i].setHint(taskItems.get(i).getTaskString());
+            }
+            else if (taskString.equals("")){
                 editTextList[i].setEnabled(true);
                 editTextList[i].setHint("Enter " +
                         UtilityClass.convertWholeNumberToPlace(i + 1, false) +
                         " task.");
             }
-            else{
-                editTextList[i].setEnabled(false);
-                editTextList[i].setHint(taskItems.get(i).getTaskString());
+            else {
+                editTextList[i].setText(taskString);
             }
         }
     }
@@ -202,6 +208,19 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
+    private void setTaskStringsFromTextFields(){
+        for (int i = 0; i < taskItems.size(); i++){
+            TaskItem taskItem = taskItems.get(i);
+            if (taskItem.isCompleted()){
+                taskItems.set(i,
+                        new TaskItem(editTextList[i].getText().toString(),
+                                taskItem.getColorId(),
+                                true,
+                                true));
+            }
+        }
+    }
+
     private void hideKeyboard(){
         //Get activity and hide keyboard
         Activity act = getActivity();
@@ -230,6 +249,7 @@ public class EnterTasksView extends BaseFragment {
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         taskItems = appPreferences.getTaskList();
 
+        setTextFields();
         checkEditTextFields();
     }
 
@@ -238,6 +258,9 @@ public class EnterTasksView extends BaseFragment {
         super.onPause();
 
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+        if (!appPreferences.tasksAreEntered()){
+            setTaskStringsFromTextFields();
+        }
         appPreferences.saveTaskList(taskItems);
     }
 

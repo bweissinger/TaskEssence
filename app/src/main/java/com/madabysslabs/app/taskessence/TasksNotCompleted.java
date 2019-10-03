@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.jaredrummler.android.widget.AnimatedSvgView;
 
+import java.util.ArrayList;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -84,12 +86,28 @@ public class TasksNotCompleted extends BaseFragment {
         svgView.start();
     }
 
+    private void setCompletedTasksStrings(AppPreferences appPreferences){
+        ArrayList<TaskItem> tasks = appPreferences.getTaskList();
+
+        for (int i = 0; i < tasks.size(); i++){
+            if(tasks.get(i).isCompleted()){
+                tasks.set(i, new TaskItem("", tasks.get(i).getColorId(), true, true));
+            }
+        }
+
+        appPreferences.saveTaskList(tasks);
+    }
+
+    private void resetTaskStatus(AppPreferences appPreferences){
+        appPreferences.setTasksEntered(false);
+        appPreferences.setTasksCompleted(false);
+    }
+
     private void goToEnterTasksView(){
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
 
-        //Reset status of tasks
-        appPreferences.setTasksEntered(false);
-        appPreferences.setTasksCompleted(false);
+        resetTaskStatus(appPreferences);
+        setCompletedTasksStrings(appPreferences);
 
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(EnterTasksViewKey.create());
     }

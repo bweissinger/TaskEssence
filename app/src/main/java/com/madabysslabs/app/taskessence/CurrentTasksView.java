@@ -62,9 +62,16 @@ public class CurrentTasksView extends BaseFragment {
         }
     }
 
-    private void allTasksCompleted(){
-        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+    private void allTasksCompleted(AppPreferences appPreferences){
         appPreferences.setTasksCompleted(true);
+
+        for (int i = 0; i < taskItems.size(); i++){
+            if(taskItems.get(i).isCompleted()){
+                taskItems.set(i, new TaskItem("", taskItems.get(i).getColorId(), true, true));
+            }
+        }
+
+        appPreferences.saveTaskList(taskItems);
 
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(TasksCompletedKey.create());
     }
@@ -79,7 +86,7 @@ public class CurrentTasksView extends BaseFragment {
 
         //Now check to see if all tasks are completed
         if(appPreferences.tasksAreCompleted()){
-            allTasksCompleted();
+            allTasksCompleted(appPreferences);
         }
     }
 
