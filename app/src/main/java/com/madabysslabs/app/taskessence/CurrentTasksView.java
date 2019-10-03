@@ -66,6 +66,12 @@ public class CurrentTasksView extends BaseFragment {
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         appPreferences.setTasksCompleted(true);
 
+        for (int i = 0; i < taskItems.size(); i++){
+            if(taskItems.get(i).isCompleted()){
+                taskItems.set(i, taskItems.set(i, new TaskItem("", taskItems.get(i).getColorId(), true, true)));
+            }
+        }
+
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(TasksCompletedKey.create());
     }
 
