@@ -145,18 +145,24 @@ public class EnterTasksView extends BaseFragment {
                 }
             });
         }
+    }
 
-        //Now set tasks availability
+    private void setTextFields(){
         for(int i = 0; i < editTextList.length; i++){
-            if(taskItems.get(i).isCompleted()){
+            String taskString = taskItems.get(i).getTaskString();
+            editTextList[i].setEnabled(true);
+            if (!taskItems.get(i).isCompleted()){
+                editTextList[i].setEnabled(false);
+                editTextList[i].setHint(taskItems.get(i).getTaskString());
+            }
+            else if (taskString.equals("")){
                 editTextList[i].setEnabled(true);
                 editTextList[i].setHint("Enter " +
                         UtilityClass.convertWholeNumberToPlace(i + 1, false) +
                         " task.");
             }
-            else{
-                editTextList[i].setEnabled(false);
-                editTextList[i].setHint(taskItems.get(i).getTaskString());
+            else {
+                editTextList[i].setText(taskString);
             }
         }
     }
@@ -230,6 +236,7 @@ public class EnterTasksView extends BaseFragment {
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         taskItems = appPreferences.getTaskList();
 
+        setTextFields();
         checkEditTextFields();
     }
 
