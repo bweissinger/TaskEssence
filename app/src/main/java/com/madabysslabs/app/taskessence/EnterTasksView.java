@@ -257,9 +257,10 @@ public class EnterTasksView extends BaseFragment {
     public void onPause(){
         super.onPause();
 
-        setTaskStringsFromTextFields();
-
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
+        if (!appPreferences.tasksAreEntered()){
+            setTaskStringsFromTextFields();
+        }
         appPreferences.saveTaskList(taskItems);
     }
 
