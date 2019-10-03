@@ -72,6 +72,8 @@ public class CurrentTasksView extends BaseFragment {
             }
         }
 
+        appPreferences.saveTaskList(taskItems);
+
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(TasksCompletedKey.create());
     }
 
