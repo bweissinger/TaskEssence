@@ -98,12 +98,15 @@ public class TasksNotCompleted extends BaseFragment {
         appPreferences.saveTaskList(tasks);
     }
 
+    private void resetTaskStatus(AppPreferences appPreferences){
+        appPreferences.setTasksEntered(false);
+        appPreferences.setTasksCompleted(false);
+    }
+
     private void goToEnterTasksView(){
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
 
-        //Reset status of tasks
-        appPreferences.setTasksEntered(false);
-        appPreferences.setTasksCompleted(false);
+        resetTaskStatus(appPreferences);
         setCompletedTasksStrings(appPreferences);
 
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(EnterTasksViewKey.create());
