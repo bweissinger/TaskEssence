@@ -98,6 +98,22 @@ public class TasksNotCompleted extends BaseFragment {
         appPreferences.saveTaskList(tasks);
     }
 
+    private void reorganizeTasks(AppPreferences appPreferences){
+        ArrayList<TaskItem> tasks = appPreferences.getTaskList();
+
+        int numTasksNotCompleted = 0;
+        for (int i = 0; i < tasks.size(); i++){
+            if(!tasks.get(i).isCompleted()){
+                TaskItem swappedTask = tasks.get(numTasksNotCompleted);
+                tasks.set(numTasksNotCompleted, tasks.get(i));
+                tasks.set(i, swappedTask);
+                numTasksNotCompleted++;
+            }
+        }
+
+        appPreferences.saveTaskList(tasks);
+    }
+
     private void resetTaskStatus(AppPreferences appPreferences){
         appPreferences.setTasksEntered(false);
         appPreferences.setTasksCompleted(false);
@@ -108,6 +124,7 @@ public class TasksNotCompleted extends BaseFragment {
 
         resetTaskStatus(appPreferences);
         setCompletedTasksStrings(appPreferences);
+        reorganizeTasks(appPreferences);
 
         MainActivity.get(getContext()).replaceHistoryFirstInstanceOfGroup(EnterTasksViewKey.create());
     }
