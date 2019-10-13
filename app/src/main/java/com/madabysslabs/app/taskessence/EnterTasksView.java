@@ -4,6 +4,7 @@ import android.content.Context;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Parcel;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatEditText;
@@ -147,6 +148,11 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
+    private int dpToPx(int dp){
+        float scale = getResources().getDisplayMetrics().density;
+        return (int) (16*scale + 0.5f);
+    }
+
     private void setTextFields(){
         for(int i = 0; i < editTextList.length; i++){
             String taskString = taskItems.get(i).getTaskString();
@@ -154,6 +160,9 @@ public class EnterTasksView extends BaseFragment {
             if (!taskItems.get(i).isCompleted()){
                 editTextList[i].setEnabled(false);
                 editTextList[i].setHint(taskItems.get(i).getTaskString());
+                TextInputLayout layout = (TextInputLayout) ((ViewGroup) editTextList[i].getParent()).getParent();
+                layout.setCounterEnabled(false);
+                layout.setPadding(layout.getPaddingLeft(), layout.getPaddingTop(), layout.getPaddingRight(), dpToPx(16));
             }
             else if (taskString.equals("")){
                 editTextList[i].setEnabled(true);
