@@ -68,7 +68,6 @@ public class EnterTasksView extends BaseFragment {
         taskItems = appPreferences.getTaskList();
 
         referenceEditTextFields(rootView);
-        setConfirmVisibility();
 
         //Background gets focus on click and hides keyboard
         tasksEnterBackground = (LinearLayout) rootView.findViewById(R.id.tasks_enter_view_background);
@@ -244,7 +243,6 @@ public class EnterTasksView extends BaseFragment {
         taskItems = appPreferences.getTaskList();
 
         setTextFields();
-        setConfirmVisibility();
     }
 
     @Override
