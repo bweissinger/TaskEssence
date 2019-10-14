@@ -126,23 +126,14 @@ public class EnterTasksView extends BaseFragment {
 
             editTextList[i].addTextChangedListener(new TextWatcher() {
 
-                public void afterTextChanged(Editable s) {
-                    //Do nothing
-                }
+                public void afterTextChanged(Editable s) {}
 
                 public void beforeTextChanged(CharSequence s, int start,
-                                              int count, int after) {
-                    //Do nothing
-                }
+                                              int count, int after) {}
 
                 public void onTextChanged(CharSequence s, int start,
                                           int before, int count) {
-                    if (!TextUtils.isEmpty(s) && !confirmTasksIsVisible) {
-                        enableConfirmTasks(true);
-                    }
-                    else if(TextUtils.isEmpty(s)){
-                        checkEditTextFields();
-                    }
+                    checkEditTextFields();
                 }
             });
         }
