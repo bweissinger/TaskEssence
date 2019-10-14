@@ -132,7 +132,7 @@ public class EnterTasksView extends BaseFragment {
 
                 public void onTextChanged(CharSequence s, int start,
                                           int before, int count) {
-                    setConfirmVisibility();
+                    setConfirmButtonVisibility();
                 }
             });
         }
@@ -173,7 +173,7 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
-    private void setConfirmVisibility(){
+    private void setConfirmButtonVisibility(){
         for (AppCompatEditText editText : editTextList){
             if (!editText.getText().toString().isEmpty() || !editText.isEnabled()){
                 enableConfirmTasks(true);
@@ -232,7 +232,7 @@ public class EnterTasksView extends BaseFragment {
             Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_enter_tasks_view, menu);
         mMenu = menu;
-        setConfirmVisibility();
+        setConfirmButtonVisibility();
     }
 
     @Override
