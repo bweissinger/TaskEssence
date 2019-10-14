@@ -68,7 +68,7 @@ public class EnterTasksView extends BaseFragment {
         taskItems = appPreferences.getTaskList();
 
         referenceEditTextFields(rootView);
-        checkEditTextFields();
+        setConfirmVisibility();
 
         //Background gets focus on click and hides keyboard
         tasksEnterBackground = (LinearLayout) rootView.findViewById(R.id.tasks_enter_view_background);
@@ -133,7 +133,7 @@ public class EnterTasksView extends BaseFragment {
 
                 public void onTextChanged(CharSequence s, int start,
                                           int before, int count) {
-                    checkEditTextFields();
+                    setConfirmVisibility();
                 }
             });
         }
@@ -174,7 +174,7 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
-    private void checkEditTextFields(){
+    private void setConfirmVisibility(){
         for (AppCompatEditText editText : editTextList){
             if (!editText.getText().toString().isEmpty() || !editText.isEnabled()){
                 enableConfirmTasks(true);
@@ -233,7 +233,7 @@ public class EnterTasksView extends BaseFragment {
             Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_enter_tasks_view, menu);
         mMenu = menu;
-        checkEditTextFields();
+        setConfirmVisibility();
     }
 
     @Override
@@ -244,7 +244,7 @@ public class EnterTasksView extends BaseFragment {
         taskItems = appPreferences.getTaskList();
 
         setTextFields();
-        checkEditTextFields();
+        setConfirmVisibility();
     }
 
     @Override
