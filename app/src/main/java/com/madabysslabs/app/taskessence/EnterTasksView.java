@@ -175,19 +175,13 @@ public class EnterTasksView extends BaseFragment {
     }
 
     private void checkEditTextFields(){
-        Boolean editTextIsEmpty = true;
-        for (int i = 0; i < editTextList.length; i++) {
-            String iterString = editTextList[i].getText().toString();
-            if (!TextUtils.isEmpty(iterString) || !editTextList[i].isEnabled()) {
-                editTextIsEmpty = false;
+        for (AppCompatEditText editText : editTextList){
+            if (!editText.getText().toString().isEmpty() || !editText.isEnabled()){
+                enableConfirmTasks(true);
+                return;
             }
         }
-        if (editTextIsEmpty) {
-            enableConfirmTasks(false);
-        }
-        else{
-            enableConfirmTasks(true);
-        }
+        enableConfirmTasks(false);
     }
 
     private void setTaskList(){
