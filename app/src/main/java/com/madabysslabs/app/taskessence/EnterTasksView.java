@@ -135,25 +135,36 @@ public class EnterTasksView extends BaseFragment {
 
     private void setTextFields(){
         for(int i = 0; i < editTextList.length; i++){
+
+            AppCompatEditText editText = editTextList[i];
             String taskString = taskItems.get(i).getTaskString();
-            editTextList[i].setEnabled(true);
+
+            editText.setEnabled(true);
+
             if (!taskItems.get(i).isCompleted()){
-                editTextList[i].setEnabled(false);
-                editTextList[i].setHint(taskItems.get(i).getTaskString());
-                TextInputLayout layout = (TextInputLayout) ((ViewGroup) editTextList[i].getParent()).getParent();
-                layout.setCounterEnabled(false);
-                layout.setPadding(layout.getPaddingLeft(), layout.getPaddingTop(), layout.getPaddingRight(), dpToPx(16));
+                editText.setEnabled(false);
+                editText.setHint(taskString);
+                TextInputLayout layout = (TextInputLayout) ((ViewGroup) editText.getParent()).getParent();
+                enableTextInputLayoutCounter(layout, false);
             }
             else if (taskString.equals("")){
-                editTextList[i].setEnabled(true);
-                editTextList[i].setHint("Enter " +
+                editText.setHint("Enter " +
                         UtilityClass.convertWholeNumberToPlace(i + 1, false) +
                         " task.");
             }
             else {
-                editTextList[i].setText(taskString);
+                editText.setText(taskString);
             }
         }
+    }
+
+    private void enableTextInputLayoutCounter(TextInputLayout layout, boolean enabled){
+        layout.setCounterEnabled(enabled);
+        layout.setPadding(
+                layout.getPaddingLeft(),
+                layout.getPaddingTop(),
+                layout.getPaddingRight(),
+                dpToPx(enabled ? 8:16));
     }
 
     private boolean oneOrMoreTasksEntered(){
