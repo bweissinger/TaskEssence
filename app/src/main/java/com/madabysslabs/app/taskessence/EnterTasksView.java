@@ -62,7 +62,6 @@ public class EnterTasksView extends BaseFragment {
 
         final View rootView = inflater.inflate(R.layout.fragment_enter_tasks_view, container, false);
 
-        //Fetch task list
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         taskItems = appPreferences.getTaskList();
 
@@ -85,33 +84,25 @@ public class EnterTasksView extends BaseFragment {
             }
         });
 
-        //Now set focus to background
         tasksEnterBackground.requestFocus();
 
-        //Disable back button for this fragment
+        //Disable back button
         Toolbar toolbar = (Toolbar)getActivity().findViewById(R.id.toolbar);
         if (toolbar != null) {
             ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
             ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         }
 
-        // Inflate the layout for this fragment
         return rootView;
     }
 
     private void referenceEditTextFields(View rootView){
 
-        //Get context of root view
         Context context = rootView.getContext();
-
-        //Find the package name for the application
         String packageName = context.getPackageName();
-
-        //Get app prefs to use with num tasks available
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
 
-        //Reference edit text fields
-        //Add detection for when text is entered into field
+        //Reference edit text fields and add listeners
         editTextList = new AppCompatEditText[NUM_EDIT_TEXTS];
         for (int i = 0; i < NUM_EDIT_TEXTS; i++){
             editTextList[i] = (AppCompatEditText) rootView.findViewById(
@@ -212,15 +203,16 @@ public class EnterTasksView extends BaseFragment {
     }
 
     private void hideKeyboard(){
-        //Get activity and hide keyboard
+
         Activity act = getActivity();
         InputMethodManager imm = (InputMethodManager) act.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        //Find the currently focused view, so we can grab the correct window token from it.
+
         View view = act.getCurrentFocus();
-        //If no view currently has focus, create a new one, just so we can grab a window token from it
         if (view == null) {
             view = new View(getActivity());
         }
+
+        //Hide keyboard
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
@@ -278,14 +270,11 @@ public class EnterTasksView extends BaseFragment {
                 calSet.set(Calendar.HOUR_OF_DAY, selectedResetTime.get(Calendar.HOUR_OF_DAY));
                 calSet.set(Calendar.MINUTE, selectedResetTime.get(Calendar.MINUTE));
             }
-
-            //Now change the reset time to the time that was selected
             appPreferences.setResetTime(selectedResetTime);
         }
 
         //Sets alarm one day ahead if time has already passed
         if (calSet.before(calNow)) {
-            //Today Set time passed, count to tomorrow
             calSet.add(Calendar.DATE, 1);
         }
 
@@ -298,7 +287,6 @@ public class EnterTasksView extends BaseFragment {
     }
 
     private void tasksEntered(){
-        //Set and save task list, then continue to Current Tasks View fragment
         setTaskList();
 
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
