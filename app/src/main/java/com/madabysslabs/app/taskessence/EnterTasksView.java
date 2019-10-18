@@ -32,7 +32,6 @@ public class EnterTasksView extends BaseFragment {
     private ArrayList<TaskItem> taskItems;
     private Menu mMenu;
     private LinearLayout tasksEnterBackground;
-    private Boolean confirmTasksIsVisible;
 
     public EnterTasksView() {
         // Required empty public constructor
@@ -167,7 +166,6 @@ public class EnterTasksView extends BaseFragment {
     }
 
     private void enableConfirmTasks(Boolean setVisible){
-        confirmTasksIsVisible = setVisible;
         if (mMenu != null && mMenu.findItem(R.id.confirm_tasks) != null) {
             mMenu.findItem(R.id.confirm_tasks).setVisible(setVisible);
         }
