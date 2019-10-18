@@ -130,7 +130,7 @@ public class EnterTasksView extends BaseFragment {
 
     private int dpToPx(int dp){
         float scale = getResources().getDisplayMetrics().density;
-        return (int) (16*scale + 0.5f);
+        return (int) (dp * scale + 0.5f);
     }
 
     private void setTextFields(){
