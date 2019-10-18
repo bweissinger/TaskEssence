@@ -124,14 +124,14 @@ public class EnterTasksView extends BaseFragment {
 
             editTextList[i].addTextChangedListener(new TextWatcher() {
 
-                public void afterTextChanged(Editable s) {}
+                public void afterTextChanged(Editable s){}
 
                 public void beforeTextChanged(CharSequence s, int start,
-                                              int count, int after) {}
+                                              int count, int after){}
 
                 public void onTextChanged(CharSequence s, int start,
                                           int before, int count) {
-                    setConfirmButtonVisibility();
+                    setConfirmButtonVisibility(oneOrMoreTasksEntered());
                 }
             });
         }
@@ -165,20 +165,19 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
-    private void enableConfirmTasks(Boolean setVisible){
-        if (mMenu != null && mMenu.findItem(R.id.confirm_tasks) != null) {
-            mMenu.findItem(R.id.confirm_tasks).setVisible(setVisible);
-        }
-    }
-
-    private void setConfirmButtonVisibility(){
+    private boolean oneOrMoreTasksEntered(){
         for (AppCompatEditText editText : editTextList){
             if (!editText.getText().toString().isEmpty() || !editText.isEnabled()){
-                enableConfirmTasks(true);
-                return;
+                return true;
             }
         }
-        enableConfirmTasks(false);
+        return false;
+    }
+
+    private void setConfirmButtonVisibility(boolean visible){
+        if (mMenu != null && mMenu.findItem(R.id.confirm_tasks) != null) {
+            mMenu.findItem(R.id.confirm_tasks).setVisible(visible);
+        }
     }
 
     private void setTaskList(){
@@ -230,7 +229,7 @@ public class EnterTasksView extends BaseFragment {
             Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_enter_tasks_view, menu);
         mMenu = menu;
-        setConfirmButtonVisibility();
+        setConfirmButtonVisibility(oneOrMoreTasksEntered());
     }
 
     @Override
