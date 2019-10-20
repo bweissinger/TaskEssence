@@ -68,7 +68,7 @@ public class EnterTasksView extends BaseFragment {
         referenceEditTextFields(rootView);
 
         //Background gets focus on click and hides keyboard
-        tasksEnterBackground = (LinearLayout) rootView.findViewById(R.id.tasks_enter_view_background);
+        tasksEnterBackground = rootView.findViewById(R.id.tasks_enter_view_background);
         tasksEnterBackground.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,12 +100,11 @@ public class EnterTasksView extends BaseFragment {
 
         Context context = rootView.getContext();
         String packageName = context.getPackageName();
-        AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
 
         //Reference edit text fields and add listeners
         editTextList = new AppCompatEditText[NUM_EDIT_TEXTS];
         for (int i = 0; i < NUM_EDIT_TEXTS; i++){
-            editTextList[i] = (AppCompatEditText) rootView.findViewById(
+            editTextList[i] = rootView.findViewById(
                     context.getResources()
                             .getIdentifier(
                                     "editText" + (i + 1),
@@ -202,11 +201,10 @@ public class EnterTasksView extends BaseFragment {
 
     private void setTaskStringsFromTextFields(){
         for (int i = 0; i < taskItems.size(); i++){
-            TaskItem taskItem = taskItems.get(i);
-            if (taskItem.isCompleted()){
+            if (taskItems.get(i).isCompleted()){
                 taskItems.set(i,
                         new TaskItem(editTextList[i].getText().toString(),
-                                taskItem.getColorId(),
+                                taskItems.get(i).getColorId(),
                                 true,
                                 true));
             }
