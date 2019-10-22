@@ -199,7 +199,7 @@ public class EnterTasksView extends BaseFragment {
         }
     }
 
-    private void setTaskStringsFromTextFields(){
+    private void updateTaskStringsFromEditableFields(){
         for (int i = 0; i < taskItems.size(); i++){
             if (taskItems.get(i).isCompleted()){
                 taskItems.set(i,
@@ -249,7 +249,7 @@ public class EnterTasksView extends BaseFragment {
 
         AppPreferences appPreferences = new AppPreferences(getActivity().getApplicationContext());
         if (!appPreferences.tasksAreEntered()){
-            setTaskStringsFromTextFields();
+            updateTaskStringsFromEditableFields();
         }
         appPreferences.saveTaskList(taskItems);
     }
